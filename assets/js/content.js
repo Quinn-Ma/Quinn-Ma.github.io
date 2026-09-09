@@ -170,7 +170,7 @@ window.SITE = {
           bullets: [
             "VTLA 多模态融合：构建视觉 - 语言 - 触觉 - 动作融合方案，利用接触反馈提升精细控制、抓取稳定性与在线纠偏能力。",
             "端到端 VLA 流水线：真机数据采集 → 跨数据集训练 → Isaac Sim 评测 → Sim-to-Real 反馈迭代，桥接 LeRobot 与 Open-PI。",
-            "视觉 - 触觉质量先验与在线物理约束抓取优化（PINN）研究，成果已投稿 IROS 2026。"
+            "紧凑视觉触觉世界模型、想象轨迹强化学习与力约束评测研究；预印本已提交 arXiv。"
           ]
         },
         {
@@ -210,12 +210,14 @@ window.SITE = {
       items: [
         {
           accent: "cyan",
-          badge: "IROS 2026 · 已投稿 2026.02",
-          title: "视觉 - 触觉质量先验 + 在线物理约束抓取优化",
+          badge: "研究预印本 · arXiv 已提交",
+          title: "紧凑视觉触觉世界模型：预测、奖励对齐与力约束",
           desc:
-            "分阶段抓取 - 提升框架：模仿学习基座策略负责几何可行的接近；视觉模型在接触前预测质量先验；触觉微抬估计真实质量与失配 Δm；紧凑 PINN 显式惩罚摩擦锥、力上限与柔性形变，输出抓取力。在力控 Franka Panda + RGB-D + 电容触觉阵列上实现，运行于 Jetson AGX Orin。",
-          chips: ["成功率 86.3%", "滑落率 6%", "峰值力 239 N", "较最优基线 +9.3 pts", "PINN 单步 < 0.5 ms"],
-          tags: ["vtla", "pinn", "franka", "ros2", "pytorch"]
+            "联合视觉、触觉和本体状态预测抓取提升过程，并通过世界模型中的想象轨迹训练强化学习策略。MuJoCo 对照实验分别评估预测精度、奖励设计与力约束：高度奖励下，同分布严格抬升成功率为 93.3%，8 N 力预算内成功率为 33.3%（力反馈基线为 70.0%）。三种训练种子在十个共享同分布环境上评估；公共 GelSight 数据用于独立感知实验，尚无真机控制或仿真到真机迁移验证。",
+          chips: ["65.2 万参数", "160 条建模轨迹", "680 次控制执行 / 40 个独立环境", "世界模型 + RL"],
+          tags: ["wm", "vtla", "franka", "pytorch"],
+          links: [{label: "项目网站 ↗", url: "https://compact-visuotactile-world-models.thumbnodirosving.chatgpt.site/"}, {label: "论文 PDF ↗", url: "https://compact-visuotactile-world-models.thumbnodirosving.chatgpt.site/assets/preprint.pdf"}, {label: "GitHub ↗", url: "https://github.com/Quinn-Ma/compact-visuotactile-world-models"}],
+          publicationStatus: "arXiv 已提交，公开编号待发布。"
         },
         {
           accent: "amber",
@@ -319,7 +321,7 @@ window.SITE = {
         monitor: { label: "真机演示", title: "机器人演示视频", desc: "双臂真机分拣、OriginX A2 户外巡回抓取、LeRobot 叠衣服，三段演示可切换播放。" },
         duck: { label: "OriginX", title: "创业项目 · OriginX 弦跃星河", desc: "桌上这只小鸭代表 OriginX 首代产品 MicroDuck：世界模型驱动的家庭教育机器人。" },
         arm: { label: "交付闭环", title: "具身智能交付闭环", desc: "遥操作数采、训练部署、可信评测、生态协同，我负责的四个环节。" },
-        laptop: { label: "研究项目", title: "研究与精选项目", desc: "IROS 2026 投稿、LeRobot × Open-PI 流水线、法行宝、SuperAgent。" },
+        laptop: { label: "研究项目", title: "研究与精选项目", desc: "视觉触觉世界模型预印本、LeRobot × Open-PI 流水线、法行宝、SuperAgent。" },
         notebook: { label: "简历 · 经历", title: "工作与研究经历", desc: "光轮智能、百度、Rice 两个实验室，可在此下载完整简历。" },
         books: { label: "教育背景", title: "教育与荣誉", desc: "Rice University ECE 硕士、西北民族大学本科、蓝桥杯全国一等奖。" },
         phone: { label: "联系我", title: "联系方式", desc: "邮箱、微信、电话、LinkedIn、GitHub。" }
@@ -482,7 +484,7 @@ window.SITE = {
           bullets: [
             "VTLA fusion: built a vision-language-tactile-action scheme that uses contact feedback to improve fine control, grasp stability and online correction.",
             "End-to-end VLA pipeline: real-robot data collection → cross-dataset training → Isaac Sim evaluation → sim-to-real iteration, bridging LeRobot with Open-PI.",
-            "Vision-tactile mass priors with online physics-informed grip optimization (PINN), submitted to IROS 2026."
+            "Compact visuotactile world models, reinforcement learning in imagination, and force-constraint evaluation; manuscript submitted to arXiv."
           ]
         },
         {
@@ -522,12 +524,14 @@ window.SITE = {
       items: [
         {
           accent: "cyan",
-          badge: "IROS 2026 · Submitted Feb 2026",
-          title: "Vision–Tactile Mass Priors with Online Physics-Informed Grip Optimization",
+          badge: "Research preprint · Submitted to arXiv",
+          title: "Compact Visuotactile World Models for Lifting: Prediction, Reward Alignment, and Force Constraints",
           desc:
-            "A staged grasp-and-lift framework: an IL base policy handles geometry-feasible approach; a vision model predicts mass priors pre-contact; a tactile micro-lift estimates realized mass and mismatch Δm; a compact PINN outputs grip force by explicitly penalizing friction-cone and force-bound violations and compliance-related pressure. Implemented on a torque-controlled Franka Panda with RGB-D and capacitive tactile arrays on Jetson AGX Orin.",
-          chips: ["86.3% success", "6% slip rate", "239 N peak force", "+9.3 pts vs best baseline", "< 0.5 ms / PINN step"],
-          tags: ["vtla", "pinn", "franka", "ros2", "pytorch"]
+            "A compact world model combines vision, touch, and proprioception to predict lifting dynamics and train reinforcement-learning policies in imagination. MuJoCo experiments distinguish forecast accuracy, reward alignment, and force constraints: height-reward RL reaches 93.3% strict lift success and 33.3% success within an 8 N per-finger budget, versus 70.0% for force feedback. These results average three trained policies on ten shared in-distribution environments. Public GelSight sensing is evaluated separately; no physical-robot control or sim-to-real transfer is reported.",
+          chips: ["652,157 parameters", "160 model-data episodes", "680 executions / 40 independent environments", "World model + RL"],
+          tags: ["wm", "vtla", "franka", "pytorch"],
+          links: [{label: "Project website ↗", url: "https://compact-visuotactile-world-models.thumbnodirosving.chatgpt.site/"}, {label: "Paper PDF ↗", url: "https://compact-visuotactile-world-models.thumbnodirosving.chatgpt.site/assets/preprint.pdf"}, {label: "GitHub ↗", url: "https://github.com/Quinn-Ma/compact-visuotactile-world-models"}],
+          publicationStatus: "Submitted to arXiv; public identifier pending."
         },
         {
           accent: "amber",
@@ -631,7 +635,7 @@ window.SITE = {
         monitor: { label: "Demos", title: "Robot demo videos", desc: "Dual-arm sorting on real hardware, OriginX A2 outdoor patrol-and-grasp, LeRobot cloth folding. Switch between the three clips." },
         duck: { label: "OriginX", title: "Startup · OriginX", desc: "The little duck on the desk stands for MicroDuck, OriginX's first product: a world-model-driven home education robot." },
         arm: { label: "Delivery loop", title: "Embodied AI delivery loop", desc: "Teleop data collection, training and deployment, trusted evaluation, ecosystem partnerships: the four stages I own." },
-        laptop: { label: "Research", title: "Research & selected projects", desc: "IROS 2026 submission, LeRobot × Open-PI pipeline, Faxingbao, SuperAgent." },
+        laptop: { label: "Research", title: "Research & selected projects", desc: "Visuotactile world-model manuscript, LeRobot × Open-PI pipeline, Faxingbao, SuperAgent." },
         notebook: { label: "Résumé", title: "Experience & research", desc: "Lightwheel, Baidu, and two labs at Rice. Download the full résumé here." },
         books: { label: "Education", title: "Education & honors", desc: "M.S. ECE at Rice, B.E. at Northwest Minzu University, Lanqiao Cup national first prize." },
         phone: { label: "Contact", title: "Contact", desc: "Email, WeChat, phone, LinkedIn, GitHub." }

@@ -147,7 +147,9 @@
         <div class="body">
           <div><span class="badge badge-${p.accent === "mint" ? "mint" : p.accent === "amber" ? "amber" : p.accent === "violet" ? "violet" : "cyan"}">${esc(p.badge)}</span></div>
           <h3>${esc(p.title)}</h3>
+          ${p.links ? `<div class="project-links">${p.links.map((link) => `<a href="${esc(link.url)}" target="_blank" rel="noopener noreferrer">${esc(link.label)}</a>`).join("")}</div>` : ""}
           <p>${esc(p.desc)}</p>
+          ${p.publicationStatus ? `<p class="publication-status">${esc(p.publicationStatus)}</p>` : ""}
           <div class="chips">${p.chips.map((c) => `<span class="chip ${p.accent === "amber" ? "" : "cyan"}">${esc(c)}</span>`).join("")}</div>
         </div>
       </article>`).join("");

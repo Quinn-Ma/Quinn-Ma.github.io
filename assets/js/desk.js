@@ -236,15 +236,17 @@ const lapTex = canvasTexture(1024, 640, (g, w, h) => {
   g.fillStyle = "#101a2b"; g.fillRect(0, 0, w, 64);
   g.fillStyle = "#22d3ee"; g.font = "600 30px 'JetBrains Mono', monospace"; g.textAlign = "left";
   g.fillText("~/research  ▸  vla_eval.py", 28, 42);
-  const lines = ["IROS 2026  ·  vision–tactile mass priors + PINN grip", "LeRobot × Open-PI  ·  instruction-conditioned VLA", "Isaac Sim benchmark  ·  success / latency / trajectory", "SuperAgent  ·  plan → execute → evaluate → reflect", "Faxingbao  ·  SFT / RLHF / hybrid RAG"];
+  const lines = ["Visuotactile world models  ·  imagined RL", "LeRobot × Open-PI  ·  instruction-conditioned VLA", "Isaac Sim benchmark  ·  success / latency / trajectory", "SuperAgent  ·  plan → execute → evaluate → reflect", "Faxingbao  ·  SFT / RLHF / hybrid RAG"];
   g.font = "500 30px 'JetBrains Mono', monospace";
   lines.forEach((l, i) => { g.fillStyle = i % 2 ? "#9aa8bd" : "#e8edf5"; g.fillText("›  " + l, 40, 130 + i * 58); });
-  // bar chart
-  const bx = 60, by = 470, bw = 900, bh = 130;
-  g.strokeStyle = "rgba(154,168,189,.35)"; g.strokeRect(bx, by, bw, bh);
-  const vals = [0.86, 0.72, 0.63, 0.77, 0.55, 0.81, 0.68, 0.9];
-  vals.forEach((v, i) => { g.fillStyle = i === 7 ? "#2ee6a6" : "#22d3ee"; const x = bx + 30 + i * 108; g.fillRect(x, by + bh - v * (bh - 20) - 4, 60, v * (bh - 20)); });
-  g.fillStyle = "#5f6d83"; g.font = "500 22px 'JetBrains Mono', monospace"; g.fillText("success rate by task  ·  86.3% ours", bx + 6, by - 12);
+  // Study facts from the current manuscript, rather than decorative results.
+  g.strokeStyle = "rgba(154,168,189,.35)"; g.strokeRect(60, 450, 900, 150);
+  g.fillStyle = "#22d3ee"; g.font = "600 28px 'JetBrains Mono', monospace";
+  g.fillText("652,157 parameters  |  160 model-data episodes", 80, 498);
+  g.fillStyle = "#e8edf5"; g.font = "500 26px 'JetBrains Mono', monospace";
+  g.fillText("680 executions / 40 independent environments", 80, 540);
+  g.fillStyle = "#9aa8bd"; g.font = "500 23px 'JetBrains Mono', monospace";
+  g.fillText("Simulation + public sensing  |  arXiv submitted", 80, 579);
 });
 const lapScreen = new THREE.Mesh(new THREE.PlaneGeometry(0.58, 0.36), new THREE.MeshBasicMaterial({ map: lapTex, toneMapped: false }));
 lapScreen.position.set(0, 0.21, 0.009); lid.add(lapScreen);

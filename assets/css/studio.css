@@ -177,3 +177,9 @@ footer { font-size: .8rem; padding-block: 2.5rem; }
   .studio-label small { font-size: .75rem; letter-spacing: .06em; }
   .studio-tools { flex-shrink: 0; }
 }
+
+/* Current research links preserve the portfolio's existing palette. */
+.project-links { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 18px; }
+.project-links a { display:inline-flex; align-items:center; min-height:44px; padding:8px 14px; border:1px solid var(--line); border-radius:8px; color:var(--cyan); text-decoration:none; font-size:.875rem; font-weight:600; }
+.project-links a:hover { background:var(--cyan-soft); border-color:var(--cyan); }
+.pcard .body .publication-status { font-size:.875rem; color:var(--muted); }
