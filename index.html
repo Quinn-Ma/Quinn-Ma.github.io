@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="dark">
+<html lang="zh-CN" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>马沁桢 | 具身智能 · OriginX 创始人</title>
 <meta name="description" content="马沁桢 Qinzhen Ma — 具身智能算法与系统负责人，OriginX 创始人，Rice University ECE 硕士。VLA / VTLA、World Model 评测、Sim-to-Real、大模型产品 0→1。">
 <meta name="author" content="Qinzhen Ma">
-<meta name="theme-color" content="#070b12">
+<meta name="theme-color" content="#f3f6fa">
 <meta property="og:title" content="Qinzhen Ma | Embodied AI · Founder, OriginX">
 <meta property="og:description" content="Embodied AI algorithm & systems lead. VLA / VTLA, World Model evaluation, sim-to-real, LLM products from 0→1.">
 <meta property="og:type" content="website">
@@ -18,15 +18,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/desk.css">
+<link rel="stylesheet" href="assets/css/studio.css">
 <script>
   // Apply saved theme before first paint to avoid a flash.
-  try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  try { var t = localStorage.getItem("studio-theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
 </script>
 <script type="importmap">
 { "imports": { "three": "./assets/vendor/three.module.min.js", "three/addons/": "./assets/vendor/" } }
 </script>
 </head>
 <body>
+<a class="skip-link" href="#about">Skip to content / 跳至正文</a>
 <div class="bg-grid" aria-hidden="true"></div>
 <div class="progress" id="progress" aria-hidden="true"></div>
 
@@ -51,9 +53,6 @@
 
   <!-- HERO: 3D desk -->
   <header class="hero hero-3d" id="home">
-    <div class="desk-stage" id="desk-stage">
-      <canvas id="desk-canvas" aria-label="Interactive 3D desk" role="img"></canvas>
-      <div class="desk-loading" id="desk-loading"><i></i><span>Loading 3D…</span></div>
       <div class="desk-overlay">
         <div class="eyebrow" id="hero-eyebrow"></div>
         <h1 id="hero-title"></h1>
@@ -61,6 +60,16 @@
         <p class="lead" id="hero-lead"></p>
         <div class="cta" id="hero-cta"></div>
       </div>
+    <div class="desk-stage" id="desk-stage">
+      <div class="studio-heading">
+        <div class="studio-label"><small>THE WORKSPACE / 01</small><strong id="studio-title">从桌上的物件，认识我的工作</strong></div>
+        <div class="studio-tools">
+          <button id="studio-reset" type="button" aria-label="恢复初始视角" title="恢复初始视角"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10a9 9 0 1 1 2 8M3 4v6h6"/></svg></button>
+          <button id="studio-motion" type="button" aria-label="暂停桌面动画" title="暂停桌面动画" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg></button>
+        </div>
+      </div>
+      <canvas id="desk-canvas" aria-label="Interactive 3D desk" role="img"></canvas>
+      <div class="desk-loading" id="desk-loading"><i></i><span>Loading 3D…</span></div>
       <div class="desk-tip" id="desk-tip" hidden></div>
       <div class="desk-bottom">
         <div class="desk-legend" id="desk-legend" role="group" aria-label="Desk objects"></div>

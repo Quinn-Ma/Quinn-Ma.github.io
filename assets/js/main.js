@@ -31,7 +31,7 @@
   /* ---------- theme ---------- */
   function applyTheme(t) {
     document.documentElement.setAttribute("data-theme", t);
-    store.set("theme", t);
+    store.set("studio-theme", t);
     const btn = $("#theme-btn");
     if (btn) {
       btn.querySelector(".lbl").textContent = t === "dark" ? T.nav.themeLight : T.nav.themeDark;
@@ -42,7 +42,7 @@
     window.dispatchEvent(new Event("site:theme"));
   }
   const themeQ = new URLSearchParams(location.search).get("theme");
-  const initialTheme = (themeQ === "light" || themeQ === "dark") ? themeQ : (store.get("theme") || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark"));
+  const initialTheme = (themeQ === "light" || themeQ === "dark") ? themeQ : (store.get("studio-theme") || "light");
 
   /* ---------- icons ---------- */
   const I = {

@@ -648,3 +648,10 @@ window.SITE = {
     }
   }
 };
+
+// The desktop companion miniature is the entry to the embodied AI workflow.
+Object.assign(window.SITE.zh.desk.hotspots.arm, {label:'P1 机器人', title:'P1 · 桌面陪伴机器人', desc:'轮式双臂陪伴机器人的桌面缩小模型。探索从数据采集、模型训练到评测与真机部署的完整链路。'});
+Object.assign(window.SITE.en.desk.hotspots.arm, {label:'P1 Robot', title:'P1 · Desktop companion', desc:'A miniature of our wheeled, dual-arm companion robot. Explore the workflow from data collection and model training to evaluation and real-world deployment.'});
+
+Object.assign(window.SITE.zh.desk.hotspots.duck, {label:'MicroDuck', title:'MicroDuck · 双足陪伴机器人', desc:'浅青色外壳、镜头眼与双足机械结构，探索 OriginX 的家庭物理 AI 项目。'});
+Object.assign(window.SITE.en.desk.hotspots.duck, {label:'MicroDuck', title:'MicroDuck · Biped companion', desc:'A cyan shell, camera eyes and an exposed biped mechanism. Explore the OriginX physical AI project for the home.'});
