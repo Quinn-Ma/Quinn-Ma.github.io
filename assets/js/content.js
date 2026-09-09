@@ -216,7 +216,7 @@ window.SITE = {
             "联合视觉、触觉和本体状态预测抓取提升过程，并通过世界模型中的想象轨迹训练强化学习策略。MuJoCo 对照实验分别评估预测精度、奖励设计与力约束：高度奖励下，同分布严格抬升成功率为 93.3%，8 N 力预算内成功率为 33.3%（力反馈基线为 70.0%）。三种训练种子在十个共享同分布环境上评估；公共 GelSight 数据用于独立感知实验，尚无真机控制或仿真到真机迁移验证。",
           chips: ["65.2 万参数", "160 条建模轨迹", "680 次控制执行 / 40 个独立环境", "世界模型 + RL"],
           tags: ["wm", "vtla", "franka", "pytorch"],
-          links: [{label: "项目网站 ↗", url: "https://compact-visuotactile-world-models.thumbnodirosving.chatgpt.site/"}, {label: "论文 PDF ↗", url: "https://compact-visuotactile-world-models.thumbnodirosving.chatgpt.site/assets/preprint.pdf"}, {label: "GitHub ↗", url: "https://github.com/Quinn-Ma/compact-visuotactile-world-models"}],
+          links: [{label: "项目网站 ↗", url: "https://compact-visuotactile-world-models.thumbnodirosving.chatgpt.site/"}, {label: "论文 PDF ↗", url: "https://github.com/Quinn-Ma/compact-visuotactile-world-models/blob/main/paper/preprint.pdf"}, {label: "GitHub ↗", url: "https://github.com/Quinn-Ma/compact-visuotactile-world-models"}],
           publicationStatus: "arXiv 已提交，公开编号待发布。"
         },
         {
@@ -530,7 +530,7 @@ window.SITE = {
             "A compact world model combines vision, touch, and proprioception to predict lifting dynamics and train reinforcement-learning policies in imagination. MuJoCo experiments distinguish forecast accuracy, reward alignment, and force constraints: height-reward RL reaches 93.3% strict lift success and 33.3% success within an 8 N per-finger budget, versus 70.0% for force feedback. These results average three trained policies on ten shared in-distribution environments. Public GelSight sensing is evaluated separately; no physical-robot control or sim-to-real transfer is reported.",
           chips: ["652,157 parameters", "160 model-data episodes", "680 executions / 40 independent environments", "World model + RL"],
           tags: ["wm", "vtla", "franka", "pytorch"],
-          links: [{label: "Project website ↗", url: "https://compact-visuotactile-world-models.thumbnodirosving.chatgpt.site/"}, {label: "Paper PDF ↗", url: "https://compact-visuotactile-world-models.thumbnodirosving.chatgpt.site/assets/preprint.pdf"}, {label: "GitHub ↗", url: "https://github.com/Quinn-Ma/compact-visuotactile-world-models"}],
+          links: [{label: "Project website ↗", url: "https://compact-visuotactile-world-models.thumbnodirosving.chatgpt.site/"}, {label: "Paper PDF ↗", url: "https://github.com/Quinn-Ma/compact-visuotactile-world-models/blob/main/paper/preprint.pdf"}, {label: "GitHub ↗", url: "https://github.com/Quinn-Ma/compact-visuotactile-world-models"}],
           publicationStatus: "Submitted to arXiv; public identifier pending."
         },
         {
