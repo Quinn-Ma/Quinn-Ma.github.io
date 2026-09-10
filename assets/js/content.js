@@ -170,7 +170,7 @@ window.SITE = {
           bullets: [
             "VTLA 多模态融合：构建视觉 - 语言 - 触觉 - 动作融合方案，利用接触反馈提升精细控制、抓取稳定性与在线纠偏能力。",
             "端到端 VLA 流水线：真机数据采集 → 跨数据集训练 → Isaac Sim 评测 → Sim-to-Real 反馈迭代，桥接 LeRobot 与 Open-PI。",
-            "紧凑视觉触觉世界模型、想象轨迹强化学习与力约束评测研究；预印本已提交 arXiv。"
+            "紧凑视觉触觉世界模型、想象轨迹强化学习与力约束评测研究；预印本已公开于 arXiv:2609.09597。"
           ]
         },
         {
@@ -210,14 +210,14 @@ window.SITE = {
       items: [
         {
           accent: "cyan",
-          badge: "研究预印本 · arXiv 已提交",
+          badge: "研究预印本 · arXiv:2609.09597",
           title: "紧凑视觉触觉世界模型：预测、奖励对齐与力约束",
           desc:
             "联合视觉、触觉和本体状态预测抓取提升过程，并通过世界模型中的想象轨迹训练强化学习策略。MuJoCo 对照实验分别评估预测精度、奖励设计与力约束：高度奖励下，同分布严格抬升成功率为 93.3%，8 N 力预算内成功率为 33.3%（力反馈基线为 70.0%）。三种训练种子在十个共享同分布环境上评估；公共 GelSight 数据用于独立感知实验，尚无真机控制或仿真到真机迁移验证。",
           chips: ["65.2 万参数", "160 条建模轨迹", "680 次控制执行 / 40 个独立环境", "世界模型 + RL"],
           tags: ["wm", "vtla", "franka", "pytorch"],
-          links: [{label: "项目网站 ↗", url: "https://compact-visuotactile-world-models.thumbnodirosving.chatgpt.site/"}, {label: "论文 PDF ↗", url: "https://github.com/Quinn-Ma/compact-visuotactile-world-models/blob/main/paper/preprint.pdf"}, {label: "GitHub ↗", url: "https://github.com/Quinn-Ma/compact-visuotactile-world-models"}],
-          publicationStatus: "arXiv 已提交，公开编号待发布。"
+          links: [{label: "项目网站 ↗", url: "https://compact-visuotactile-world-models.thumbnodirosving.chatgpt.site/"}, {label: "arXiv 论文 ↗", url: "https://arxiv.org/abs/2609.09597"}, {label: "GitHub ↗", url: "https://github.com/Quinn-Ma/compact-visuotactile-world-models"}],
+          publicationStatus: "预印本已公开：arXiv:2609.09597。"
         },
         {
           accent: "amber",
@@ -484,7 +484,7 @@ window.SITE = {
           bullets: [
             "VTLA fusion: built a vision-language-tactile-action scheme that uses contact feedback to improve fine control, grasp stability and online correction.",
             "End-to-end VLA pipeline: real-robot data collection → cross-dataset training → Isaac Sim evaluation → sim-to-real iteration, bridging LeRobot with Open-PI.",
-            "Compact visuotactile world models, reinforcement learning in imagination, and force-constraint evaluation; manuscript submitted to arXiv."
+            "Compact visuotactile world models, reinforcement learning in imagination, and force-constraint evaluation; preprint available as arXiv:2609.09597."
           ]
         },
         {
@@ -524,14 +524,14 @@ window.SITE = {
       items: [
         {
           accent: "cyan",
-          badge: "Research preprint · Submitted to arXiv",
+          badge: "Research preprint · arXiv:2609.09597",
           title: "Compact Visuotactile World Models for Lifting: Prediction, Reward Alignment, and Force Constraints",
           desc:
             "A compact world model combines vision, touch, and proprioception to predict lifting dynamics and train reinforcement-learning policies in imagination. MuJoCo experiments distinguish forecast accuracy, reward alignment, and force constraints: height-reward RL reaches 93.3% strict lift success and 33.3% success within an 8 N per-finger budget, versus 70.0% for force feedback. These results average three trained policies on ten shared in-distribution environments. Public GelSight sensing is evaluated separately; no physical-robot control or sim-to-real transfer is reported.",
           chips: ["652,157 parameters", "160 model-data episodes", "680 executions / 40 independent environments", "World model + RL"],
           tags: ["wm", "vtla", "franka", "pytorch"],
-          links: [{label: "Project website ↗", url: "https://compact-visuotactile-world-models.thumbnodirosving.chatgpt.site/"}, {label: "Paper PDF ↗", url: "https://github.com/Quinn-Ma/compact-visuotactile-world-models/blob/main/paper/preprint.pdf"}, {label: "GitHub ↗", url: "https://github.com/Quinn-Ma/compact-visuotactile-world-models"}],
-          publicationStatus: "Submitted to arXiv; public identifier pending."
+          links: [{label: "Project website ↗", url: "https://compact-visuotactile-world-models.thumbnodirosving.chatgpt.site/"}, {label: "arXiv paper ↗", url: "https://arxiv.org/abs/2609.09597"}, {label: "GitHub ↗", url: "https://github.com/Quinn-Ma/compact-visuotactile-world-models"}],
+          publicationStatus: "Preprint available: arXiv:2609.09597."
         },
         {
           accent: "amber",

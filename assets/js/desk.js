@@ -246,7 +246,7 @@ const lapTex = canvasTexture(1024, 640, (g, w, h) => {
   g.fillStyle = "#e8edf5"; g.font = "500 26px 'JetBrains Mono', monospace";
   g.fillText("680 executions / 40 independent environments", 80, 540);
   g.fillStyle = "#9aa8bd"; g.font = "500 23px 'JetBrains Mono', monospace";
-  g.fillText("Simulation + public sensing  |  arXiv submitted", 80, 579);
+  g.fillText("Simulation + public sensing  |  arXiv:2609.09597", 80, 579);
 });
 const lapScreen = new THREE.Mesh(new THREE.PlaneGeometry(0.58, 0.36), new THREE.MeshBasicMaterial({ map: lapTex, toneMapped: false }));
 lapScreen.position.set(0, 0.21, 0.009); lid.add(lapScreen);
