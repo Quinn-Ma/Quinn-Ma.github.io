@@ -79,12 +79,6 @@ nav.top { padding-inline: max(28px, calc((100vw - 1440px) / 2)); background: col
 .sh .n { font-size: .8rem; border: 0; border-radius: 0; padding: 0; background: none; color: var(--cyan); }
 .sh .rule { opacity: .55; }
 .block > .lead { font-size: 1rem; max-width: 75ch; }
-.startup-card { padding: clamp(24px,3.5vw,44px); border-radius: 20px; background: var(--panel); box-shadow: none; gap: 3rem; }
-.startup-card::before { opacity: .14; }
-.startup-card h3 { font-size: clamp(1.35rem,2.4vw,1.75rem); line-height: 1.5; }
-.startup-card .desc, .spoint span { font-size: 1rem; }
-.spoint { padding-block: .75rem; }
-.spoint i { border: 1px solid var(--line2); border-radius: 9px; background: var(--bg2); }
 .loop, .xp, .lead-card, .pcard, .edu-card, .ccard { box-shadow: none; }
 .two-col { gap: 3rem; grid-template-columns: minmax(0,1.3fr) minmax(0,1fr); }
 .xp { border-radius: 14px; padding: 1.5rem; }
@@ -146,7 +140,6 @@ footer { font-size: .8rem; padding-block: 2.5rem; }
   .dp-video { grid-template-columns: 72px 1fr; }
   .dp-video img { width: 72px; height: 44px; }
   .about-strip .stats { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  .startup-card { gap: 1.5rem; }
   .block { padding-block: 2rem; }
   .sh { margin-bottom: 1.4rem; }
   .xp { padding: 1.2rem; }
@@ -156,11 +149,11 @@ footer { font-size: .8rem; padding-block: 2.5rem; }
 /* Clear light surfaces and restrained details throughout the portfolio. */
 :root[data-theme="light"] .desk-stage { border-color: #d1dce8; box-shadow: 0 20px 70px rgba(42,65,96,.09); }
 :root[data-theme="light"] .desk-legend { background: rgba(255,255,255,.88); }
-.hero-card::before, .startup-card::after { display: none; }
+.hero-card::before { display: none; }
 .eyebrow::before { display: none; }
 .fact { background: none; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding-inline: 0; }
 .avatar { border-radius: 50%; }
-.status, .sk-group .lbl, .loop-hint, .startup-cta small, .startup-brand small,
+.status, .sk-group .lbl, .loop-hint,
 .edu .dt, .honor .s, .honor .lg, .crow .lbl { font-size: .75rem; }
 .lead-card span, .edu .nt { font-size: .875rem; }
 .crow .act { font-size: .875rem; min-height: 44px; }

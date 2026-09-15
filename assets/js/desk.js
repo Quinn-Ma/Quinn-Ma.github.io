@@ -28,7 +28,7 @@ const PAL = {
   dark:  { bg: 0x070b12, wall: 0x172336, wallLow: 0x121c2a, floor: 0x101824, desk: 0xb29170, deskEdge: 0x765943, hemiSky: 0x9fb8ff, hemiGround: 0x1a1410, keyI: 2.6, fillI: 0.9 },
   light: { bg: 0xf4f7fb, wall: 0xe4ebf4, wallLow: 0xd6dfeb, floor: 0xcfd8e4, desk: 0xd8ba94, deskEdge: 0xa0815e, hemiSky: 0xffffff, hemiGround: 0x9aa4b0, keyI: 2.2, fillI: 1.2 }
 };
-const C = { white: 0xeef1f5, black: 0x1b1f27, metal: 0x2b3038, cyan: 0x22d3ee, mint: 0x2ee6a6, amber: 0xf5b84b, violet: 0xa78bfa, rose: 0xfb6f92, duck: 0xffd23f, orange: 0xff8a3d, leaf: 0x3fa860, pot: 0xb3543a, paper: 0xf6f3ea, blue: 0x3b82f6 };
+const C = { white: 0xeef1f5, black: 0x1b1f27, metal: 0x2b3038, cyan: 0x22d3ee, mint: 0x2ee6a6, amber: 0xf5b84b, violet: 0xa78bfa, rose: 0xfb6f92, orange: 0xff8a3d, leaf: 0x3fa860, pot: 0xb3543a, paper: 0xf6f3ea, blue: 0x3b82f6 };
 
 /* ---------- renderer / scene ---------- */
 let renderer;
@@ -260,7 +260,7 @@ laptop.add(laptopKeys);
 for (const x of [-.23,.23]) mesh(new THREE.CylinderGeometry(.014,.014,.07,16), lapBody, { pos:[x,.026,-.19], rot:[0,0,Math.PI/2], parent:laptop, cast:false });
 register("laptop", laptop, { look: [-0.95, 0.2, -0.17], dir: [0.45, 0.42, 0.9], fitW: 0.95, minDist: 0.6, accent: C.violet });
 
-/* ---------- P1 desktop miniature: dual-arm companion robot ---------- */
+/* ---------- desktop miniature: wheeled dual-arm robot ---------- */
 const arm = new THREE.Group(); arm.position.set(1.0, 0, -.38); arm.rotation.y = -.18; world.add(arm);
 const armWhite = ceramic(0xf1eee6,{roughness:.35,clearcoat:.26});
 const armDark = mat(0x202831,{roughness:.4,metalness:.22});
@@ -296,8 +296,7 @@ const chestTexture=canvasTexture(512,384,(g,w,h)=>{
   g.strokeStyle='#268f8d';g.lineWidth=9;
   g.beginPath();g.ellipse(w/2-13,160,24,14,-.7,0,Math.PI*2);g.stroke();
   g.beginPath();g.ellipse(w/2+13,148,24,14,-.7,0,Math.PI*2);g.stroke();
-  g.fillStyle='#29373c';g.font='600 34px sans-serif';g.textAlign='center';g.fillText('ORIGINX',w/2,218);
-});
+  });
 mesh(new THREE.PlaneGeometry(.124,.093),mat(0xffffff,{map:chestTexture,roughness:.7}),{pos:[0,.531,.081],parent:arm,cast:false});
 // Neck, rounded display head, and the slim raised binocular sensor.
 mesh(new THREE.CylinderGeometry(.038,.039,.091,20),armDark,{pos:[0,.676,-.018],parent:arm});
@@ -344,77 +343,6 @@ for(const side of [-1,1]) {
   robotArms.push({shoulder,elbow,hand,side});
 }
 register("arm",arm,{look:[1.0,.50,-.38],dir:[-.22,.25,1],fitW:.88,minDist:.76,accent:C.cyan});
-
-/* ---------- MicroDuck: cyan biped with camera eyes and orange bill ---------- */
-const duck = new THREE.Group(); duck.position.set(1.03,0,.47); duck.rotation.y=-.65; world.add(duck);
-const duckShell=ceramic(0x9bdbe0,{roughness:.34,clearcoat:.22});
-const duckPanel=mat(0xbac7c7,{roughness:.57,metalness:.16});
-const duckOrange=ceramic(0xf48228,{roughness:.38});
-const duckYellow=mat(0xf6bd25,{roughness:.42});
-const duckFrame=mat(0x20282b,{roughness:.5,metalness:.38});
-const duckScrew=mat(0x9ca9a9,{roughness:.3,metalness:.8});
-// Low, two-legged chassis. Broad feet preserve the prototype's silhouette.
-mesh(rbox(.17,.07,.11,.018,4),duckFrame,{pos:[0,.208,0],parent:duck});
-const duckLegs=[];
-for(const side of [-1,1]) {
-  const leg=new THREE.Group();leg.position.set(side*.069,.183,0);duck.add(leg);
-  mesh(new THREE.CylinderGeometry(.034,.034,.035,20),duckScrew,{pos:[side*.015,0,0],rot:[0,0,Math.PI/2],parent:leg});
-  mesh(rbox(.046,.067,.049,.008),duckFrame,{pos:[0,-.034,0],rot:[-.17,0,0],parent:leg});
-  mesh(new THREE.CylinderGeometry(.026,.026,.05,20),duckScrew,{pos:[0,-.071,.009],rot:[0,0,Math.PI/2],parent:leg});
-  mesh(rbox(.043,.067,.045,.006),duckFrame,{pos:[0,-.102,.018],rot:[.11,0,0],parent:leg});
-  for(const z of [-.012,.033]) mesh(rbox(.006,.069,.009,.001),duckScrew,{pos:[side*.025,-.105,z],parent:leg,cast:false});
-  mesh(rbox(.1,.017,.125,.019,4),duckYellow,{pos:[0,-.173,.026],parent:leg});
-  mesh(rbox(.103,.027,.124,.018,4),duckOrange,{pos:[0,-.154,.026],parent:leg});
-  mesh(rbox(.053,.045,.053,.009),duckOrange,{pos:[0,-.13,-.009],parent:leg});
-  for(const x of [-.016,.016]) mesh(new THREE.SphereGeometry(.0035,8,6),duckFrame,{pos:[x,-.122,.02],parent:leg,cast:false});
-  duckLegs.push(leg);
-}
-// Cyan torso with exposed servo blocks and a small side wing on each hip.
-mesh(rbox(.176,.085,.132,.03,5),duckShell,{pos:[0,.282,.018],parent:duck});
-mesh(rbox(.14,.027,.092,.009),duckFrame,{pos:[0,.232,0],parent:duck});
-for(const side of [-1,1]) {
-  const wing=mesh(rbox(.018,.098,.073,.014,4),duckShell,{pos:[side*.123,.214,.003],rot:[-.18,0,side*-.42],parent:duck});
-  for(const y of [-.027,.027]) mesh(new THREE.CylinderGeometry(.004,.004,.02,8),duckScrew,{pos:[side*.002,y,.016],rot:[0,0,Math.PI/2],parent:wing,cast:false});
-  mesh(new THREE.CylinderGeometry(.026,.026,.018,16),duckScrew,{pos:[side*.092,.252,0],rot:[0,0,Math.PI/2],parent:duck,cast:false});
-}
-// Mechanical neck: stacked servos, bearing caps and a curved exposed cable.
-mesh(rbox(.042,.13,.047,.005),duckFrame,{pos:[0,.385,-.029],parent:duck});
-for(const y of [.339,.389,.438]) {
-  mesh(rbox(.058,.026,.053,.005),duckFrame,{pos:[0,y,-.029],parent:duck});
-  mesh(new THREE.CylinderGeometry(.016,.016,.065,18),duckScrew,{pos:[0,y,-.029],rot:[0,0,Math.PI/2],parent:duck,cast:false});
-}
-const neckCable=new THREE.CatmullRomCurve3([new THREE.Vector3(.027,.32,-.039),new THREE.Vector3(.041,.375,-.092),new THREE.Vector3(.038,.443,-.071)]);
-mesh(new THREE.TubeGeometry(neckCable,16,.003,6,false),duckFrame,{parent:duck,cast:false});
-// Extruded side profile: domed cyan shell, grey cheek and a flat orange bill.
-const duckHead=new THREE.Group();duckHead.position.set(0,.485,-.005);duckHead.rotation.x=-.13;duck.add(duckHead);
-function duckHeadProfile(thickness,inset=0) {
-  const shape=new THREE.Shape();
-  shape.moveTo(-.135,-.069);shape.lineTo(.143,-.069);
-  shape.quadraticCurveTo(.18,-.05,.148,.012);
-  shape.quadraticCurveTo(.085,.136,-.025,.142);
-  shape.quadraticCurveTo(-.16,.145,-.158,-.015);
-  shape.quadraticCurveTo(-.157,-.056,-.135,-.069);
-  const geo=new THREE.ExtrudeGeometry(shape,{depth:thickness,bevelEnabled:true,bevelSize:.006,bevelThickness:.006,bevelSegments:3,steps:1,curveSegments:16});
-  const a=geo.attributes.position;
-  for(let i=0;i<a.count;i++){const z=a.getX(i),y=a.getY(i),x=thickness/2-a.getZ(i);a.setXYZ(i,x,y,z);}
-  geo.computeVertexNormals();return geo;
-}
-mesh(duckHeadProfile(.174),duckShell,{parent:duckHead});
-for(const side of [-1,1]) {
-  const cheek=mesh(duckHeadProfile(.006),duckPanel,{pos:[side*.091,0,0],parent:duckHead,cast:false});
-  cheek.scale.set(1,.91,.91);
-  mesh(new THREE.CylinderGeometry(.046,.046,.014,32),duckYellow,{pos:[side*.105,.027,-.018],rot:[0,0,Math.PI/2],parent:duckHead});
-  mesh(new THREE.CylinderGeometry(.022,.025,.019,28),duckFrame,{pos:[side*.119,.027,-.018],rot:[0,0,Math.PI/2],parent:duckHead,cast:false});
-  mesh(new THREE.CylinderGeometry(.011,.012,.021,24),mat(0x10282d,{metalness:.65,roughness:.12}),{pos:[side*.122,.027,-.018],rot:[0,0,Math.PI/2],parent:duckHead,cast:false});
-  mesh(new THREE.SphereGeometry(.003,8,6),mat(0xc3e5e6),{pos:[side*.134,.032,-.013],parent:duckHead,cast:false});
-  mesh(rbox(.013,.012,.022,.005),duckFrame,{pos:[side*.102,-.007,-.069],rot:[.35,0,0],parent:duckHead,cast:false});
-}
-// The bill wraps the lower edge and extends forwards, as on the reference.
-mesh(rbox(.211,.035,.327,.012,5),duckOrange,{pos:[0,-.071,.015],parent:duckHead});
-mesh(rbox(.217,.028,.068,.012,5),duckOrange,{pos:[0,-.055,.177],rot:[-.08,0,0],parent:duckHead});
-mesh(rbox(.202,.007,.31,.003),mat(0xc95d22,{roughness:.58}),{pos:[0,-.091,.019],parent:duckHead,cast:false});
-for(const side of [-1,1]) mesh(rbox(.014,.044,.025,.007),duckOrange,{pos:[side*.094,-.024,.18],rot:[-.25,0,0],parent:duckHead,cast:false});
-register("duck",duck,{look:[1.03,.335,.47],dir:[-.8,.35,1],fitW:.69,minDist:.52,accent:C.mint});
 
 /* ---------- notebook / résumé (experience) ---------- */
 const notebook = new THREE.Group(); notebook.position.set(-0.76, 0, 0.51); notebook.rotation.y = -0.15; world.add(notebook);
@@ -524,8 +452,8 @@ poster(-1.05, 1.2, 0.7, 0.5, (g, w, h) => {
   g.strokeStyle = "#2ee6a6"; g.lineWidth = 5; g.beginPath(); g.arc(w / 2, 150, 70, 0, Math.PI * 2); g.stroke();
   g.beginPath(); g.arc(w / 2, 150, 22, 0, Math.PI * 2); g.fillStyle = "#2ee6a6"; g.fill();
   for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4; g.beginPath(); g.moveTo(w / 2 + Math.cos(a) * 30, 150 + Math.sin(a) * 30); g.lineTo(w / 2 + Math.cos(a) * 60, 150 + Math.sin(a) * 60); g.stroke(); }
-  g.fillStyle = "#e8edf5"; g.textAlign = "center"; g.font = "700 62px 'Space Grotesk', sans-serif"; g.fillText("OriginX", w / 2, 300);
-  g.fillStyle = "#2ee6a6"; g.font = "500 26px 'JetBrains Mono', monospace"; g.fillText("PHYSICAL AI FOR THE HOME", w / 2, 345);
+  g.fillStyle = "#e8edf5"; g.textAlign = "center"; g.font = "700 62px 'Space Grotesk', sans-serif"; g.fillText("Embodied AI", w / 2, 300);
+  g.fillStyle = "#2ee6a6"; g.font = "500 26px 'JetBrains Mono', monospace"; g.fillText("VLA · VTLA · WORLD MODEL", w / 2, 345);
 });
 
 /* ---------- videos on the monitor ---------- */
@@ -725,10 +653,6 @@ function renderPanel(key) {
   } else if (key === "arm") {
     body = `<ol class="dp-steps">${t.loop.nodes.map((n) => `<li><div><b>${esc(n.short)}</b><span>${esc(n.title)}</span></div></li>`).join("")}</ol>
     <div class="chips">${t.skills.groups[0].items.map(([n]) => `<span class="chip cyan">${esc(n)}</span>`).join("")}</div>${link("loop", D.scrollMore)}`;
-  } else if (key === "duck") {
-    const S = t.startup;
-    body = `<div class="dp-brand"><b>${esc(S.brand)}</b><small>${esc(S.tagline)}</small></div><h4>${esc(S.headline)}</h4><p>${esc(S.desc)}</p>
-    <a class="btn btn-primary" href="${lang() === "en" ? L.startupEn : L.startup}" target="_blank" rel="noopener">${esc(S.cta)} ↗</a>${link("startup", D.scrollMore)}`;
   } else if (key === "notebook") {
     const E = t.experience, Hh = t.hero;
     body = `<div class="dp-me"><img src="${L.avatar}" alt=""><div><b>${esc(Hh.name)}</b><small>${esc(Hh.roles[0])}</small></div></div>
@@ -763,10 +687,9 @@ function updatePanelVideoState() {
 
 /* ---------- legend / hint / i18n ---------- */
 const legend = $("#desk-legend"), hint = $("#desk-hint");
-const ORDER = ["monitor", "duck", "arm", "laptop", "notebook", "books", "phone"];
+const ORDER = ["monitor", "arm", "laptop", "notebook", "books", "phone"];
 const iconPaths = {
  monitor:'<rect x="3" y="3" width="18" height="13" rx="2"/><path d="M8 21h8M12 16v5"/>',
- duck:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/>',
  arm:'<rect x="5" y="5" width="14" height="11" rx="4"/><path d="M9 10h.01M15 10h.01M9 13h6M12 2v3M3 9v4m18-4v4M8 16v4h8v-4"/>',
  laptop:'<rect x="5" y="3" width="14" height="12" rx="1.5"/><path d="m5 15-3 5h20l-3-5M10 17h4"/>',
  notebook:'<rect x="5" y="3" width="15" height="18" rx="2"/><path d="M8 3v18M3 7h4M3 12h4M3 17h4m8-10h5m-5 4h5"/>',
@@ -812,8 +735,6 @@ function animate(dt) {
     part.shoulder.rotation.z=part.side*(.22+Math.sin(t*.65+part.side)*.045);
     part.elbow.rotation.x=-.23+Math.sin(t*.65+part.side)*.055;
   }
-  duck.position.y = 0;
-  duckHead.rotation.y = Math.sin(t * .65) * .18; duckHead.rotation.z = Math.sin(t * .85) * .035;
 
   screenGlow.intensity = 1.0 + Math.sin(t * 7.3) * 0.08 + Math.sin(t * 2.1) * 0.12;
   }
@@ -834,8 +755,8 @@ function animate(dt) {
     }
   }
 }
-// keep the arm's own LED and duck LEDs from being overridden by glow
-[arm, duck].forEach((g) => g.traverse((o) => { if (o.isMesh && o.material.emissiveIntensity > 0.5) o.material.userData.keep = true; }));
+// keep the arm's own LED from being overridden by glow
+[arm].forEach((g) => g.traverse((o) => { if (o.isMesh && o.material.emissiveIntensity > 0.5) o.material.userData.keep = true; }));
 
 /* ---------- loop / lifecycle ---------- */
 function tick(now) {
@@ -863,8 +784,8 @@ window.addEventListener("pointerdown", gesture); window.addEventListener("keydow
 
 function failGracefully() {
   stage.classList.add("no-webgl");
-  const order = ['monitor','duck','arm','laptop','notebook','books','phone'];
-  const links = ['projects','startup','loop','projects','experience','education','contact'];
+  const order = ['monitor','arm','laptop','notebook','books','phone'];
+  const links = ['projects','loop','projects','experience','education','contact'];
   const content = SITE[lang()];
   $('#desk-legend').innerHTML = order.map((key,i)=>`<a class="btn btn-ghost" href="#${links[i]}">${esc(content.desk.hotspots[key].label)}</a>`).join('');
   const fallback = document.createElement('img'); fallback.className='scene-fallback'; fallback.src=SITE.videos[0].poster; fallback.alt=content.desk.demoTitle; stage.prepend(fallback);
@@ -881,7 +802,7 @@ function boot() {
   start();
   stage.classList.add("ready");
   $("#desk-loading")?.remove();
-  // deep link: ?focus=monitor|duck|arm|laptop|notebook|books|phone
+  // deep link: ?focus=monitor|arm|laptop|notebook|books|phone
   const f = new URLSearchParams(location.search).get("focus");
   if (f && hotspots[f]) setTimeout(() => focus(f), 400);
 }

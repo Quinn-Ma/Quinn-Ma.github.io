@@ -113,7 +113,7 @@
 #desk-videos video { width: 8px; height: 8px; }
 
 .desk-panel[hidden] { display: none; }
-.about-strip .stats { grid-template-columns: 1fr 1fr; }
+.about-strip .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 /* about strip under the hero */
 .about-strip { padding: 2.4rem 0 .5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; align-items: stretch; }

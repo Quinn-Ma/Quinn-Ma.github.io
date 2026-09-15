@@ -17,7 +17,7 @@ assets/media/           演示视频（mp4 / webm）与封面图
 assets/Qinzhen_Ma_Resume.pdf  简历下载
 ```
 
-3D 桌面上的热点：显示器（演示视频）、小鸭 MicroDuck（OriginX）、机械臂（交付闭环）、笔记本电脑（研究项目）、简历本（经历）、书堆 + 学位帽（教育）、手机（联系方式）。
+3D 桌面上的热点：显示器（演示视频）、机械臂（交付闭环）、笔记本电脑（研究项目）、简历本（经历）、书堆 + 学位帽（教育）、手机（联系方式）。
 
 ## 本地预览
 
@@ -25,7 +25,7 @@ assets/Qinzhen_Ma_Resume.pdf  简历下载
 python -m http.server 8765
 ```
 
-然后打开 http://127.0.0.1:8765/ 。可用的调试参数：`?lang=en`、`?theme=light`、`?focus=monitor`（直接聚焦某个热点：monitor / duck / arm / laptop / notebook / books / phone）。
+然后打开 http://127.0.0.1:8765/ 。可用的调试参数：`?lang=en`、`?theme=light`、`?focus=monitor`（直接聚焦某个热点：monitor / arm / laptop / notebook / books / phone）。
 
 ## 换视频
 

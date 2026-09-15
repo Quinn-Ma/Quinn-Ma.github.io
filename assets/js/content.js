@@ -11,25 +11,22 @@ window.SITE = {
     github: "https://github.com/quinn-ma",
     wechat: "luckyqinzhen",
     resume: "assets/Qinzhen_Ma_Resume.pdf",
-    startup: "https://brightfuture.originxairobotics.com/",
-    startupEn: "https://brightfuture.originxairobotics.com/en/",
     video: "assets/media/lehome_fold_clothes.webm",
     avatar: "assets/img/avatar.jpg"
   },
 
   videos: [
     { id: "dual", file: "assets/media/dual_arm_pick_place.mp4", poster: "assets/media/dual_arm_pick_place.jpg", type: "video/mp4" },
-    { id: "a2", file: "assets/media/originx_a2_piper_outdoor.mp4", poster: "assets/media/originx_a2_piper_outdoor.jpg", type: "video/mp4" },
+    { id: "a2", file: "assets/media/quadruped_piper_outdoor.mp4", poster: "assets/media/quadruped_piper_outdoor.jpg", type: "video/mp4" },
     { id: "fold", file: "assets/media/lehome_fold_clothes.webm", poster: "assets/media/lehome_fold_clothes.jpg", type: "video/webm" }
   ],
   defaultVideo: "dual",
 
   zh: {
-    meta: { title: "马沁桢 | 具身智能 · OriginX 创始人", lang: "zh-CN" },
+    meta: { title: "马沁桢 | 具身智能算法与系统负责人", lang: "zh-CN" },
     nav: {
       brand: "马沁桢",
       items: [
-        ["startup", "创业项目"],
         ["loop", "交付闭环"],
         ["experience", "经历"],
         ["projects", "项目"],
@@ -47,49 +44,29 @@ window.SITE = {
       name: "马沁桢",
       roles: [
         "具身智能算法与系统负责人",
-        "OriginX 创始人 · 家庭场景物理 AI",
         "Rice ECE 硕士 · Kavraki Lab / RobotΠ Lab",
         "百度大模型产品「法行宝」0→1"
       ],
       lead:
         "端到端技术负责人，横跨工业级大模型与具身智能。从真机数据采集、VLA / VTLA 训练、闭环仿真评测到真机部署，围绕成功率、稳定性、可复现性与失败恢复建立完整工程闭环。",
-      ctaPrimary: "查看创业项目 OriginX",
+      ctaPrimary: "精选项目",
       ctaSecondary: "工作经历",
       ctaTertiary: "下载简历",
       stats: [
         { n: 4, suffix: "+", label: "年 AI 研发" },
         { n: 2, suffix: "", label: "个 0→1 系统交付" },
-        { n: 2, suffix: "", label: "个 Rice 实验室" },
-        { n: 1, suffix: "", label: "家创业公司" }
+        { n: 2, suffix: "", label: "个 Rice 实验室" }
       ],
       facts: [
-        ["身份", "OriginX 创始人 · Rice ECE 硕士生"],
+        ["身份", "Rice ECE 硕士生 · 具身智能算法与系统负责人"],
         ["坐标", "Houston, TX · 北京 / 上海"],
         ["方向", "VLA / VTLA · World Model 评测 · Sim-to-Real"],
         ["目标角色", "联创 CTO / 具身智能技术负责人"]
       ],
       scrollHint: "向下滚动"
     },
-    startup: {
-      num: "01",
-      title: "创业项目",
-      badge: "FOUNDER · 2026",
-      brand: "OriginX · 弦跃星河",
-      tagline: "基于家庭场景的物理 AI",
-      headline: "世界模型驱动的家庭教育机器人，从第一台真机开始自进化",
-      desc:
-        "OriginX 以世界模型为核心，用低成本真机进入家庭场景，通过真实环境的数据回流、自动实验与持续评测，让机器人从第一台样机开始自我进化。首代产品面向家庭教育场景。",
-      points: [
-        ["世界模型驱动", "以 World Model 作为评测器与规划核心，闭环仿真与真机数据互相校准。"],
-        ["低成本真机", "首代 MicroDuck 约 ¥3,000，轮式双臂平台控制在 ¥20,000 以内。"],
-        ["真实数据飞轮", "家庭环境中的数据回流 → 自动实验 → 策略迭代，形成自进化闭环。"],
-        ["技术负责人", "创始人，负责技术路线、算法系统与研发交付。"]
-      ],
-      cta: "打开商业计划书站点",
-      ctaNote: "brightfuture.originxairobotics.com · 中 / EN"
-    },
     loop: {
-      num: "02",
+      num: "01",
       title: "负责人交付闭环",
       lead: "把研发链路拆成四个可交付的环节，每一环都有可验证的产出。点击节点查看细节。",
       autoHint: "自动轮播 · 点击暂停",
@@ -133,7 +110,7 @@ window.SITE = {
       ]
     },
     experience: {
-      num: "03",
+      num: "02",
       title: "工作与研究经历",
       lead: "工业界 4 年多大模型与具身智能研发，同时在 Rice 两个实验室做研究。悬停右侧技术栈可高亮相关经历。",
       filters: [
@@ -202,7 +179,7 @@ window.SITE = {
       ]
     },
     projects: {
-      num: "04",
+      num: "03",
       title: "精选项目",
       lead: "从具身操作到法律大模型，每个项目都以可验证的指标收口。",
       demoLabel: "▶ LeRobot 真机演示 · 叠衣服",
@@ -249,7 +226,7 @@ window.SITE = {
       ]
     },
     skills: {
-      num: "05",
+      num: "04",
       title: "技术栈",
       lead: "悬停任一标签，左侧相关经历与项目会同步高亮。",
       groups: [
@@ -284,7 +261,7 @@ window.SITE = {
       ]
     },
     education: {
-      num: "06",
+      num: "05",
       title: "教育与荣誉",
       items: [
         { school: "Rice University · 美国莱斯大学", degree: "电气与计算机工程 · 硕士", date: "2025 – 2026.12（预计）", note: "Kavraki Lab · RobotΠ Lab" },
@@ -294,7 +271,7 @@ window.SITE = {
       langs: "English · Fluent"
     },
     contact: {
-      num: "07",
+      num: "06",
       title: "联系我",
       lead: "欢迎交流具身智能、World Model 评测与机器人产品 0→1。目标角色：联创 CTO / 具身智能技术负责人。",
       email: "邮箱",
@@ -318,8 +295,7 @@ window.SITE = {
       play: "播放", pause: "暂停", mute: "静音", unmute: "开启声音",
       demoTitle: "真机 / 仿真演示",
       hotspots: {
-        monitor: { label: "真机演示", title: "机器人演示视频", desc: "双臂真机分拣、OriginX A2 户外巡回抓取、LeRobot 叠衣服，三段演示可切换播放。" },
-        duck: { label: "OriginX", title: "创业项目 · OriginX 弦跃星河", desc: "桌上这只小鸭代表 OriginX 首代产品 MicroDuck：世界模型驱动的家庭教育机器人。" },
+        monitor: { label: "真机演示", title: "机器人演示视频", desc: "双臂真机分拣、四足平台户外巡回抓取、LeRobot 叠衣服，三段演示可切换播放。" },
         arm: { label: "交付闭环", title: "具身智能交付闭环", desc: "遥操作数采、训练部署、可信评测、生态协同，我负责的四个环节。" },
         laptop: { label: "研究项目", title: "研究与精选项目", desc: "视觉触觉世界模型预印本、LeRobot × Open-PI 流水线、法行宝、SuperAgent。" },
         notebook: { label: "简历 · 经历", title: "工作与研究经历", desc: "光轮智能、百度、Rice 两个实验室，可在此下载完整简历。" },
@@ -328,7 +304,7 @@ window.SITE = {
       },
       videos: {
         dual: { title: "双臂真机 · 瓶罐分拣回收", desc: "两台机械臂协同抓取桌面上的饮料瓶并投入回收桶，真机运行。", tags: ["双臂", "真机", "抓取放置"] },
-        a2: { title: "OriginX A2 + Piper X · 户外巡回搜索与抓取", desc: "四足平台搭载 Piper X 机械臂：RGB-D SLAM 建图与 A* 搜索，大范围道路巡回，物理抓取回收瓶罐（无 IK、无瞬移）。", tags: ["四足 + 机械臂", "RGB-D SLAM", "自主抓取"] },
+        a2: { title: "四足平台 + Piper X · 户外巡回搜索与抓取", desc: "四足平台搭载 Piper X 机械臂：RGB-D SLAM 建图与 A* 搜索，大范围道路巡回，物理抓取回收瓶罐（无 IK、无瞬移）。", tags: ["四足 + 机械臂", "RGB-D SLAM", "自主抓取"] },
         fold: { title: "LeRobot · 叠衣服", desc: "指令条件 VLA 策略（LeRobot + Open-PI）执行叠衣服任务。", tags: ["LeRobot", "VLA", "Open-PI"] }
       }
     },
@@ -339,11 +315,10 @@ window.SITE = {
   },
 
   en: {
-    meta: { title: "Qinzhen Ma | Embodied AI · Founder, OriginX", lang: "en" },
+    meta: { title: "Qinzhen Ma | Embodied AI Algorithm & Systems Lead", lang: "en" },
     nav: {
       brand: "Qinzhen Ma",
       items: [
-        ["startup", "Startup"],
         ["loop", "Delivery Loop"],
         ["experience", "Experience"],
         ["projects", "Projects"],
@@ -361,49 +336,29 @@ window.SITE = {
       name: "Qinzhen (Maxwell) Ma",
       roles: [
         "Embodied AI Algorithm & Systems Lead",
-        "Founder, OriginX · Physical AI for the Home",
         "M.S. ECE @ Rice · Kavraki Lab / RobotΠ Lab",
         "Shipped Baidu's legal LLM product from 0→1"
       ],
       lead:
         "End-to-end technical lead spanning industrial LLMs and embodied AI. I own the full loop from real-robot data collection, VLA / VTLA training and closed-loop simulation evaluation to real-world deployment, engineered around success rate, stability, reproducibility and failure recovery.",
-      ctaPrimary: "See my startup, OriginX",
+      ctaPrimary: "Selected projects",
       ctaSecondary: "Experience",
       ctaTertiary: "Download résumé",
       stats: [
         { n: 4, suffix: "+", label: "years in AI R&D" },
         { n: 2, suffix: "", label: "0→1 systems shipped" },
-        { n: 2, suffix: "", label: "research labs at Rice" },
-        { n: 1, suffix: "", label: "startup founded" }
+        { n: 2, suffix: "", label: "research labs at Rice" }
       ],
       facts: [
-        ["Now", "Founder, OriginX · M.S. ECE student at Rice"],
+        ["Now", "M.S. ECE student at Rice · Embodied AI algorithm & systems lead"],
         ["Based", "Houston, TX · Beijing / Shanghai"],
         ["Focus", "VLA / VTLA · World Model evaluation · Sim-to-Real"],
         ["Open to", "Co-founder CTO / Embodied AI tech lead"]
       ],
       scrollHint: "Scroll"
     },
-    startup: {
-      num: "01",
-      title: "Startup",
-      badge: "FOUNDER · 2026",
-      brand: "OriginX",
-      tagline: "Physical AI for the Home",
-      headline: "A world-model-driven home education robot that self-evolves from the very first unit",
-      desc:
-        "OriginX puts a world model at the core, enters the home with low-cost real robots, and closes the loop with real-world data return, automated experiments and continuous evaluation, so the robot improves from its first prototype onward. The first product targets home education.",
-      points: [
-        ["World-model driven", "The World Model serves as evaluator and planning core; closed-loop sim and real-robot data calibrate each other."],
-        ["Low-cost hardware", "First-gen MicroDuck at about ¥3,000; a wheeled dual-arm platform kept under ¥20,000."],
-        ["Real-data flywheel", "Data from real homes → automated experiments → policy iteration, forming a self-evolving loop."],
-        ["My role", "Founder, owning technical strategy, algorithm systems and R&D delivery."]
-      ],
-      cta: "Open the business plan site",
-      ctaNote: "brightfuture.originxairobotics.com · 中 / EN"
-    },
     loop: {
-      num: "02",
+      num: "01",
       title: "The Delivery Loop I Own",
       lead: "I break the R&D pipeline into four deliverable stages, each with verifiable output. Click a node for details.",
       autoHint: "Auto-cycling · click to pause",
@@ -447,7 +402,7 @@ window.SITE = {
       ]
     },
     experience: {
-      num: "03",
+      num: "02",
       title: "Experience & Research",
       lead: "Four-plus years of industry LLM and embodied-AI R&D, plus research in two labs at Rice. Hover a skill on the right to highlight related roles.",
       filters: [
@@ -516,7 +471,7 @@ window.SITE = {
       ]
     },
     projects: {
-      num: "04",
+      num: "03",
       title: "Selected Projects",
       lead: "From embodied manipulation to legal LLMs, each project closes on verifiable metrics.",
       demoLabel: "▶ LeRobot real-robot demo · fold clothes",
@@ -563,7 +518,7 @@ window.SITE = {
       ]
     },
     skills: {
-      num: "05",
+      num: "04",
       title: "Skills",
       lead: "Hover any tag to highlight the roles and projects where I used it.",
       groups: [
@@ -598,7 +553,7 @@ window.SITE = {
       ]
     },
     education: {
-      num: "06",
+      num: "05",
       title: "Education & Honors",
       items: [
         { school: "Rice University", degree: "M.S., Electrical & Computer Engineering", date: "2025 – Dec 2026 (expected)", note: "Kavraki Lab · RobotΠ Lab" },
@@ -608,7 +563,7 @@ window.SITE = {
       langs: "English · Fluent · Mandarin · Native"
     },
     contact: {
-      num: "07",
+      num: "06",
       title: "Contact",
       lead: "Happy to talk embodied AI, World Model evaluation and robot products from 0→1. Open to co-founder CTO / embodied AI tech lead roles.",
       email: "Email",
@@ -632,8 +587,7 @@ window.SITE = {
       play: "Play", pause: "Pause", mute: "Mute", unmute: "Sound on",
       demoTitle: "Real-robot / simulation demos",
       hotspots: {
-        monitor: { label: "Demos", title: "Robot demo videos", desc: "Dual-arm sorting on real hardware, OriginX A2 outdoor patrol-and-grasp, LeRobot cloth folding. Switch between the three clips." },
-        duck: { label: "OriginX", title: "Startup · OriginX", desc: "The little duck on the desk stands for MicroDuck, OriginX's first product: a world-model-driven home education robot." },
+        monitor: { label: "Demos", title: "Robot demo videos", desc: "Dual-arm sorting on real hardware, quadruped outdoor patrol-and-grasp, LeRobot cloth folding. Switch between the three clips." },
         arm: { label: "Delivery loop", title: "Embodied AI delivery loop", desc: "Teleop data collection, training and deployment, trusted evaluation, ecosystem partnerships: the four stages I own." },
         laptop: { label: "Research", title: "Research & selected projects", desc: "Visuotactile world-model manuscript, LeRobot × Open-PI pipeline, Faxingbao, SuperAgent." },
         notebook: { label: "Résumé", title: "Experience & research", desc: "Lightwheel, Baidu, and two labs at Rice. Download the full résumé here." },
@@ -642,7 +596,7 @@ window.SITE = {
       },
       videos: {
         dual: { title: "Dual-arm real robot · bottle sorting", desc: "Two arms cooperatively pick bottles off the bench and drop them into a bin, running on real hardware.", tags: ["Dual-arm", "Real robot", "Pick & place"] },
-        a2: { title: "OriginX A2 + Piper X · outdoor patrol, search & grasp", desc: "Quadruped base with a Piper X arm: RGB-D SLAM mapping with A* search, wide road coverage, physical grasping of bottles (no IK shortcuts, no teleport).", tags: ["Quadruped + arm", "RGB-D SLAM", "Autonomous grasp"] },
+        a2: { title: "Quadruped + Piper X · outdoor patrol, search & grasp", desc: "Quadruped base with a Piper X arm: RGB-D SLAM mapping with A* search, wide road coverage, physical grasping of bottles (no IK shortcuts, no teleport).", tags: ["Quadruped + arm", "RGB-D SLAM", "Autonomous grasp"] },
         fold: { title: "LeRobot · fold clothes", desc: "Instruction-conditioned VLA policy (LeRobot + Open-PI) performing a cloth-folding task.", tags: ["LeRobot", "VLA", "Open-PI"] }
       }
     },
@@ -652,10 +606,3 @@ window.SITE = {
     }
   }
 };
-
-// The desktop companion miniature is the entry to the embodied AI workflow.
-Object.assign(window.SITE.zh.desk.hotspots.arm, {label:'P1 机器人', title:'P1 · 桌面陪伴机器人', desc:'轮式双臂陪伴机器人的桌面缩小模型。探索从数据采集、模型训练到评测与真机部署的完整链路。'});
-Object.assign(window.SITE.en.desk.hotspots.arm, {label:'P1 Robot', title:'P1 · Desktop companion', desc:'A miniature of our wheeled, dual-arm companion robot. Explore the workflow from data collection and model training to evaluation and real-world deployment.'});
-
-Object.assign(window.SITE.zh.desk.hotspots.duck, {label:'MicroDuck', title:'MicroDuck · 双足陪伴机器人', desc:'浅青色外壳、镜头眼与双足机械结构，探索 OriginX 的家庭物理 AI 项目。'});
-Object.assign(window.SITE.en.desk.hotspots.duck, {label:'MicroDuck', title:'MicroDuck · Biped companion', desc:'A cyan shell, camera eyes and an exposed biped mechanism. Explore the OriginX physical AI project for the home.'});

@@ -71,7 +71,7 @@
     $("#hero-title").innerHTML = `<span class="greet">${esc(H.greeting)}</span><span class="name">${esc(H.name)}</span>`;
     $("#hero-lead").textContent = H.lead;
     $("#hero-cta").innerHTML =
-      `<a class="btn btn-primary" href="${lang === "en" ? L.startupEn : L.startup}" target="_blank" rel="noopener">${esc(H.ctaPrimary)} ${I.ext}</a>` +
+      `<a class="btn btn-primary" href="#projects">${esc(H.ctaPrimary)} ${I.arrow}</a>` +
       `<a class="btn btn-ghost" href="#experience">${esc(H.ctaSecondary)} ${I.arrow}</a>` +
       `<a class="btn btn-amber" href="${L.resume}" download>${esc(H.ctaTertiary)} ${I.down}</a>`;
     $("#hero-stats").innerHTML = H.stats.map((s) => `<div class="stat"><b data-count="${s.n}" data-suffix="${esc(s.suffix)}">0${esc(s.suffix)}</b><span>${esc(s.label)}</span></div>`).join("");
@@ -79,25 +79,6 @@
     $("#avatar-name").textContent = H.name;
     $("#avatar-role").textContent = H.roles[0];
     $("#about-lead").textContent = H.lead;
-
-    // startup
-    const S = T.startup;
-    $("#startup-num").textContent = S.num;
-    $("#startup-title").textContent = S.title;
-    $("#startup-card").innerHTML = `
-      <div>
-        <span class="badge badge-mint">${esc(S.badge)}</span>
-        <div class="startup-brand"><div class="startup-logo">${I.logo}</div><div><b>${esc(S.brand)}</b><small>${esc(S.tagline)}</small></div></div>
-        <h3>${esc(S.headline)}</h3>
-        <p class="desc">${esc(S.desc)}</p>
-        <div class="startup-cta">
-          <a class="btn btn-primary" href="${lang === "en" ? L.startupEn : L.startup}" target="_blank" rel="noopener">${esc(S.cta)} ${I.ext}</a>
-          <small>${esc(S.ctaNote)}</small>
-        </div>
-      </div>
-      <div class="startup-points">
-        ${S.points.map(([b, s], i) => `<div class="spoint"><i>0${i + 1}</i><div><b>${esc(b)}</b><span>${esc(s)}</span></div></div>`).join("")}
-      </div>`;
 
     // loop
     const LP = T.loop;
