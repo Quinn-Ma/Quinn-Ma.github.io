@@ -138,6 +138,17 @@ window.SITE = {
           ]
         },
         {
+          type: "industry",
+          org: "NASA",
+          role: "实习生 · VTLA 方向",
+          date: "2025.09 – 2026.01",
+          meta: "实习 · 视觉-触觉-语言-动作（VTLA）",
+          tags: ["vtla"],
+          bullets: [
+            "实习期间从事视觉-触觉-语言-动作（VTLA）方向的研发工作。"
+          ]
+        },
+        {
           type: "research",
           org: "Rice University · RobotΠ Lab",
           role: "VTLA 研究 · LeRobot × Open-PI 流水线",
@@ -427,6 +438,17 @@ window.SITE = {
             "World Model correction: designed and implemented a result-correction / calibration module that reduces systematic prediction bias in World-Model-as-Evaluator.",
             "Solver work: developed a Newton Solver module to strengthen dynamics solving and simulation execution.",
             "Ecosystem: owned technical engagement with NVIDIA and LeRobot teams on framework adaptation, issue triage, joint validation and resources."
+          ]
+        },
+        {
+          type: "industry",
+          org: "NASA",
+          role: "Intern · VTLA",
+          date: "Sep 2025 – Jan 2026",
+          meta: "Internship · Vision-Tactile-Language-Action (VTLA)",
+          tags: ["vtla"],
+          bullets: [
+            "Worked on vision-tactile-language-action (VTLA) research and development during the internship."
           ]
         },
         {
