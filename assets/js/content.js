@@ -126,13 +126,14 @@ window.SITE = {
           org: "Lightwheel · 光轮智能",
           role: "具身智能算法与系统负责人",
           date: "2026.05 – 2026.08",
-          meta: "直接汇报创始人 · 团队数十人 · 数据 / 训练 / 评测 / 部署 / 技术合作",
+          meta: "两条主线：World Model（与浙江大学彭思达博导合作）· 硬件全链路（直接向创始人谢晨汇报）· 团队数十人",
           tags: ["vla", "vtla", "lerobot", "ros2", "isaacsim", "sim2real", "sysid", "newton", "wm", "python", "cpp", "docker"],
           bullets: [
+            "World Model 线：与浙江大学彭思达博导合作开展 World Model 研究；设计并实现评测结果纠偏 / 校准模块，降低系统性预测偏差，增强 World Model as an Evaluator 的可靠性。",
+            "硬件全链路线：直接向创始人谢晨汇报，负责整条硬件链路，包括硬件选型、遥操作、数据采集、模型训练、评测，以及仿真与真机的对比分析。",
             "真机数据闭环：从 0→1 搭建遥操作与数据采集链路，自主开发数采 App，贯通设备控制、相机 / 状态 / 动作同步、数据落盘与质量检查。",
             "真机部署闭环：打通模型训练、推理服务与机器人动作执行链路，完成策略真机部署验证，建立安全检查、动作限幅与失败回收机制。",
             "仿真评测可靠性：主导机器人参数辨识与仿真模型校准，降低动力学偏差及随机评测波动，提升闭环仿真结果的稳定性与可复现性。",
-            "World Model 纠偏：设计并实现评测结果纠偏 / 校准模块，降低系统性预测偏差，增强 World Model as an Evaluator 的可靠性。",
             "求解器研发：开发 Newton Solver 模块，完善动力学求解与仿真执行链路。",
             "技术生态合作：负责与 NVIDIA 及 LeRobot 团队的技术对接，推进框架适配、问题定位、联合验证与资源协同。"
           ]
@@ -429,13 +430,14 @@ window.SITE = {
           org: "Lightwheel",
           role: "Embodied AI Algorithm & Systems Lead",
           date: "May 2026 – Aug 2026",
-          meta: "Reported to the founder · team of dozens · data / training / evaluation / deployment / partnerships",
+          meta: "Two tracks: world models (with Prof. Sida Peng, Zhejiang University) · full hardware pipeline (reporting to founder Chen Xie) · team of dozens",
           tags: ["vla", "vtla", "lerobot", "ros2", "isaacsim", "sim2real", "sysid", "newton", "wm", "python", "cpp", "docker"],
           bullets: [
+            "World-model track: collaborated with Prof. Sida Peng (Zhejiang University) on world-model research; designed and implemented a result-correction / calibration module that reduces systematic prediction bias in World-Model-as-Evaluator.",
+            "Hardware track: reported to founder Chen Xie and owned the full hardware pipeline: hardware selection, teleoperation, data collection, model training, evaluation, and sim-versus-real comparison analysis.",
             "Real-robot data loop: built teleoperation and data collection from 0→1, including an in-house capture app covering device control, camera / state / action sync, logging and quality checks.",
             "Deployment loop: connected training, inference serving and robot execution; validated policies on hardware with safety checks, action limiting and failure recovery.",
             "Evaluation reliability: led parameter identification and simulator calibration, reducing dynamics error and evaluation variance for stable, reproducible closed-loop results.",
-            "World Model correction: designed and implemented a result-correction / calibration module that reduces systematic prediction bias in World-Model-as-Evaluator.",
             "Solver work: developed a Newton Solver module to strengthen dynamics solving and simulation execution.",
             "Ecosystem: owned technical engagement with NVIDIA and LeRobot teams on framework adaptation, issue triage, joint validation and resources."
           ]
