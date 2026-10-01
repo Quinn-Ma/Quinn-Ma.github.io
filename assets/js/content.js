@@ -257,7 +257,10 @@ window.SITE = {
           title: "Describe the Task First, Ask Last? Query Placement and Prefix-Cache Reuse in Small Long-Context Models",
           authors: "Qinzhen Ma",
           venue: "NeurIPS 2026 Workshop on Long-Context Foundation Models (LCFM)",
-          links: [{ label: "Workshop ↗", url: "https://longcontextfm.github.io/" }]
+          links: [
+            { label: "OpenReview ↗", url: "https://openreview.net/forum?id=CudnQFPdXj" },
+            { label: "Workshop ↗", url: "https://longcontextfm.github.io/" }
+          ]
         },
         {
           accent: "cyan",
@@ -265,7 +268,10 @@ window.SITE = {
           title: "Measuring Failure Yield and Reflection Cost in a Frozen Robot Policy",
           authors: "Qinzhen Ma",
           venue: "NeurIPS 2026 Workshop on Self-Evolving Diversity-Driven Search for Robust AI Systems (EvoRobust)",
-          links: [{ label: "Workshop ↗", url: "https://liuj-2023.github.io/EvoRobust-NeurIPS2026/" }]
+          links: [
+            { label: "OpenReview ↗", url: "https://openreview.net/forum?id=Y6liuBEhxa" },
+            { label: "Workshop ↗", url: "https://liuj-2023.github.io/EvoRobust-NeurIPS2026/" }
+          ]
         },
         {
           accent: "cyan",
@@ -277,10 +283,11 @@ window.SITE = {
         },
         {
           accent: "cyan",
-          badge: "NeurIPS 2026 Workshop · 已录用",
+          badge: "NeurIPS 2026 Workshop · 已录用（Poster）",
           title: "Learning Physics by Asking: Revisable Beliefs for Reconstructed 3D Assets",
           authors: "Qinzhen Ma",
-          venue: "NeurIPS 2026 Workshop on Developmental Perspectives on AI (DevAI)"
+          venue: "NeurIPS 2026 Workshop on Developmental Perspectives on AI (DevAI)",
+          links: [{ label: "OpenReview ↗", url: "https://openreview.net/forum?id=BxA202rskH" }]
         },
         {
           accent: "cyan",
@@ -635,7 +642,10 @@ window.SITE = {
           title: "Describe the Task First, Ask Last? Query Placement and Prefix-Cache Reuse in Small Long-Context Models",
           authors: "Qinzhen Ma",
           venue: "NeurIPS 2026 Workshop on Long-Context Foundation Models (LCFM)",
-          links: [{ label: "Workshop ↗", url: "https://longcontextfm.github.io/" }]
+          links: [
+            { label: "OpenReview ↗", url: "https://openreview.net/forum?id=CudnQFPdXj" },
+            { label: "Workshop ↗", url: "https://longcontextfm.github.io/" }
+          ]
         },
         {
           accent: "cyan",
@@ -643,7 +653,10 @@ window.SITE = {
           title: "Measuring Failure Yield and Reflection Cost in a Frozen Robot Policy",
           authors: "Qinzhen Ma",
           venue: "NeurIPS 2026 Workshop on Self-Evolving Diversity-Driven Search for Robust AI Systems (EvoRobust)",
-          links: [{ label: "Workshop ↗", url: "https://liuj-2023.github.io/EvoRobust-NeurIPS2026/" }]
+          links: [
+            { label: "OpenReview ↗", url: "https://openreview.net/forum?id=Y6liuBEhxa" },
+            { label: "Workshop ↗", url: "https://liuj-2023.github.io/EvoRobust-NeurIPS2026/" }
+          ]
         },
         {
           accent: "cyan",
@@ -655,10 +668,11 @@ window.SITE = {
         },
         {
           accent: "cyan",
-          badge: "NeurIPS 2026 Workshop · Accepted",
+          badge: "NeurIPS 2026 Workshop · Accepted (Poster)",
           title: "Learning Physics by Asking: Revisable Beliefs for Reconstructed 3D Assets",
           authors: "Qinzhen Ma",
-          venue: "NeurIPS 2026 Workshop on Developmental Perspectives on AI (DevAI)"
+          venue: "NeurIPS 2026 Workshop on Developmental Perspectives on AI (DevAI)",
+          links: [{ label: "OpenReview ↗", url: "https://openreview.net/forum?id=BxA202rskH" }]
         },
         {
           accent: "cyan",
