@@ -30,6 +30,7 @@ window.SITE = {
         ["loop", "交付闭环"],
         ["experience", "经历"],
         ["projects", "项目"],
+        ["publications", "论文"],
         ["skills", "技术栈"],
         ["contact", "联系"]
       ],
@@ -237,8 +238,81 @@ window.SITE = {
         }
       ]
     },
-    skills: {
+    publications: {
       num: "04",
+      title: "论文",
+      lead: "NeurIPS 2026 Workshop 录用论文与 arXiv 预印本。作者与录用状态以 OpenReview 投稿记录和 arXiv 页面为准。",
+      items: [
+        {
+          accent: "cyan",
+          badge: "NeurIPS 2026 Workshop · 已录用（Poster）",
+          title: "State or Pattern? Do Zero-Shot Time-Series Foundation Models Use the Full State When Simulating Chaotic Systems?",
+          authors: "Qinzhen Ma",
+          venue: "NeurIPS 2026 Workshop on Foundation Models for Temporal Systems (FMTS)",
+          links: [{ label: "Workshop ↗", url: "https://fmts-workshop.github.io/" }]
+        },
+        {
+          accent: "cyan",
+          badge: "NeurIPS 2026 Workshop · 已录用",
+          title: "Describe the Task First, Ask Last? Query Placement and Prefix-Cache Reuse in Small Long-Context Models",
+          authors: "Qinzhen Ma",
+          venue: "NeurIPS 2026 Workshop on Long-Context Foundation Models (LCFM)",
+          links: [{ label: "Workshop ↗", url: "https://longcontextfm.github.io/" }]
+        },
+        {
+          accent: "cyan",
+          badge: "NeurIPS 2026 Workshop · 已录用",
+          title: "Measuring Failure Yield and Reflection Cost in a Frozen Robot Policy",
+          authors: "Qinzhen Ma",
+          venue: "NeurIPS 2026 Workshop on Self-Evolving Diversity-Driven Search for Robust AI Systems (EvoRobust)",
+          links: [{ label: "Workshop ↗", url: "https://liuj-2023.github.io/EvoRobust-NeurIPS2026/" }]
+        },
+        {
+          accent: "cyan",
+          badge: "NeurIPS 2026 Workshop · 已录用",
+          title: "Calibrate the Gate, Trust the Rank: Where Biased Simulation and World-Model Evaluators Break VLA Post-Training",
+          authors: "Qinzhen Ma",
+          venue: "NeurIPS 2026 Workshop on Robot Policy Adaptation and Deployment (RoboPAD)",
+          links: [{ label: "Workshop ↗", url: "https://robotpad2026.github.io/" }]
+        },
+        {
+          accent: "cyan",
+          badge: "NeurIPS 2026 Workshop · 已录用",
+          title: "Learning Physics by Asking: Revisable Beliefs for Reconstructed 3D Assets",
+          authors: "Qinzhen Ma",
+          venue: "NeurIPS 2026 Workshop on Developmental Perspectives on AI (DevAI)"
+        },
+        {
+          accent: "cyan",
+          badge: "NeurIPS 2026 Workshop · 已录用 · arXiv:2609.10873",
+          title: "When Validation Stops Learning: Auditing Update Admission for Continual Embodied Agents",
+          authors: "Qinzhen Ma, Ruihai Wu",
+          venue: "NeurIPS 2026 Workshop on Continual Learning for Foundation Model Agents (CL4FMAgents)",
+          links: [{ label: "arXiv ↗", url: "https://arxiv.org/abs/2609.10873" }]
+        },
+        {
+          accent: "violet",
+          badge: "预印本 · arXiv:2609.12216",
+          title: "Guardrailed Meta-Agent Loops: Stress-Testing Policy Pinning, Budget Bounds, and Crash Recovery",
+          authors: "Qinzhen Ma, Jialin Wu",
+          venue: "arXiv 预印本 · 2026 年 9 月",
+          links: [{ label: "arXiv ↗", url: "https://arxiv.org/abs/2609.12216" }]
+        },
+        {
+          accent: "violet",
+          badge: "预印本 · arXiv:2609.09597",
+          title: "Compact Visuotactile World Models for Lifting: Prediction, Reward Alignment, and Force Constraints",
+          authors: "Qinzhen Ma",
+          venue: "arXiv 预印本 · 2026 年 9 月",
+          links: [
+            { label: "arXiv ↗", url: "https://arxiv.org/abs/2609.09597" },
+            { label: "GitHub ↗", url: "https://github.com/Quinn-Ma/compact-visuotactile-world-models" }
+          ]
+        }
+      ]
+    },
+    skills: {
+      num: "05",
       title: "技术栈",
       lead: "悬停任一标签，左侧相关经历与项目会同步高亮。",
       groups: [
@@ -273,7 +347,7 @@ window.SITE = {
       ]
     },
     education: {
-      num: "05",
+      num: "06",
       title: "教育与荣誉",
       items: [
         { school: "Rice University · 美国莱斯大学", degree: "电气与计算机工程 · 硕士", date: "2025 – 2026.12（预计）", note: "Kavraki Lab · RobotΠ Lab" },
@@ -283,7 +357,7 @@ window.SITE = {
       langs: "English · Fluent"
     },
     contact: {
-      num: "06",
+      num: "07",
       title: "联系我",
       lead: "欢迎交流具身智能、World Model 评测与机器人产品 0→1。目标角色：联创 CTO / 具身智能技术负责人。",
       email: "邮箱",
@@ -334,6 +408,7 @@ window.SITE = {
         ["loop", "Delivery Loop"],
         ["experience", "Experience"],
         ["projects", "Projects"],
+        ["publications", "Publications"],
         ["skills", "Skills"],
         ["contact", "Contact"]
       ],
@@ -541,8 +616,81 @@ window.SITE = {
         }
       ]
     },
-    skills: {
+    publications: {
       num: "04",
+      title: "Publications",
+      lead: "Accepted NeurIPS 2026 workshop papers and arXiv preprints. Authors and acceptance status follow the OpenReview submission records and the arXiv listings.",
+      items: [
+        {
+          accent: "cyan",
+          badge: "NeurIPS 2026 Workshop · Accepted (Poster)",
+          title: "State or Pattern? Do Zero-Shot Time-Series Foundation Models Use the Full State When Simulating Chaotic Systems?",
+          authors: "Qinzhen Ma",
+          venue: "NeurIPS 2026 Workshop on Foundation Models for Temporal Systems (FMTS)",
+          links: [{ label: "Workshop ↗", url: "https://fmts-workshop.github.io/" }]
+        },
+        {
+          accent: "cyan",
+          badge: "NeurIPS 2026 Workshop · Accepted",
+          title: "Describe the Task First, Ask Last? Query Placement and Prefix-Cache Reuse in Small Long-Context Models",
+          authors: "Qinzhen Ma",
+          venue: "NeurIPS 2026 Workshop on Long-Context Foundation Models (LCFM)",
+          links: [{ label: "Workshop ↗", url: "https://longcontextfm.github.io/" }]
+        },
+        {
+          accent: "cyan",
+          badge: "NeurIPS 2026 Workshop · Accepted",
+          title: "Measuring Failure Yield and Reflection Cost in a Frozen Robot Policy",
+          authors: "Qinzhen Ma",
+          venue: "NeurIPS 2026 Workshop on Self-Evolving Diversity-Driven Search for Robust AI Systems (EvoRobust)",
+          links: [{ label: "Workshop ↗", url: "https://liuj-2023.github.io/EvoRobust-NeurIPS2026/" }]
+        },
+        {
+          accent: "cyan",
+          badge: "NeurIPS 2026 Workshop · Accepted",
+          title: "Calibrate the Gate, Trust the Rank: Where Biased Simulation and World-Model Evaluators Break VLA Post-Training",
+          authors: "Qinzhen Ma",
+          venue: "NeurIPS 2026 Workshop on Robot Policy Adaptation and Deployment (RoboPAD)",
+          links: [{ label: "Workshop ↗", url: "https://robotpad2026.github.io/" }]
+        },
+        {
+          accent: "cyan",
+          badge: "NeurIPS 2026 Workshop · Accepted",
+          title: "Learning Physics by Asking: Revisable Beliefs for Reconstructed 3D Assets",
+          authors: "Qinzhen Ma",
+          venue: "NeurIPS 2026 Workshop on Developmental Perspectives on AI (DevAI)"
+        },
+        {
+          accent: "cyan",
+          badge: "NeurIPS 2026 Workshop · Accepted · arXiv:2609.10873",
+          title: "When Validation Stops Learning: Auditing Update Admission for Continual Embodied Agents",
+          authors: "Qinzhen Ma, Ruihai Wu",
+          venue: "NeurIPS 2026 Workshop on Continual Learning for Foundation Model Agents (CL4FMAgents)",
+          links: [{ label: "arXiv ↗", url: "https://arxiv.org/abs/2609.10873" }]
+        },
+        {
+          accent: "violet",
+          badge: "Preprint · arXiv:2609.12216",
+          title: "Guardrailed Meta-Agent Loops: Stress-Testing Policy Pinning, Budget Bounds, and Crash Recovery",
+          authors: "Qinzhen Ma, Jialin Wu",
+          venue: "arXiv preprint · September 2026",
+          links: [{ label: "arXiv ↗", url: "https://arxiv.org/abs/2609.12216" }]
+        },
+        {
+          accent: "violet",
+          badge: "Preprint · arXiv:2609.09597",
+          title: "Compact Visuotactile World Models for Lifting: Prediction, Reward Alignment, and Force Constraints",
+          authors: "Qinzhen Ma",
+          venue: "arXiv preprint · September 2026",
+          links: [
+            { label: "arXiv ↗", url: "https://arxiv.org/abs/2609.09597" },
+            { label: "GitHub ↗", url: "https://github.com/Quinn-Ma/compact-visuotactile-world-models" }
+          ]
+        }
+      ]
+    },
+    skills: {
+      num: "05",
       title: "Skills",
       lead: "Hover any tag to highlight the roles and projects where I used it.",
       groups: [
@@ -577,7 +725,7 @@ window.SITE = {
       ]
     },
     education: {
-      num: "05",
+      num: "06",
       title: "Education & Honors",
       items: [
         { school: "Rice University", degree: "M.S., Electrical & Computer Engineering", date: "2025 – Dec 2026 (expected)", note: "Kavraki Lab · RobotΠ Lab" },
@@ -587,7 +735,7 @@ window.SITE = {
       langs: "English · Fluent · Mandarin · Native"
     },
     contact: {
-      num: "06",
+      num: "07",
       title: "Contact",
       lead: "Happy to talk embodied AI, World Model evaluation and robot products from 0→1. Open to co-founder CTO / embodied AI tech lead roles.",
       email: "Email",

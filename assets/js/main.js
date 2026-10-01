@@ -135,6 +135,22 @@
         </div>
       </article>`).join("");
 
+    // publications
+    const PB = T.publications;
+    $("#pub-num").textContent = PB.num;
+    $("#pub-title").textContent = PB.title;
+    $("#pub-lead").textContent = PB.lead;
+    $("#pub-grid").innerHTML = PB.items.map((p) => `
+      <article class="pcard ${p.accent}">
+        <div class="body">
+          <div><span class="badge badge-${p.accent === "mint" ? "mint" : p.accent === "amber" ? "amber" : p.accent === "violet" ? "violet" : "cyan"}">${esc(p.badge)}</span></div>
+          <h3>${esc(p.title)}</h3>
+          <p>${esc(p.authors)}</p>
+          <p>${esc(p.venue)}</p>
+          ${p.links ? `<div class="project-links">${p.links.map((link) => `<a href="${esc(link.url)}" target="_blank" rel="noopener noreferrer">${esc(link.label)}</a>`).join("")}</div>` : ""}
+        </div>
+      </article>`).join("");
+
     // education
     const ED = T.education;
     $("#edu-num").textContent = ED.num;
